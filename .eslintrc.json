@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-underscore-dangle": 1,
+    "import/prefer-default-export": 0,
+    "linebreak-style": 0,
+    "import/no-extraneous-dependencies": 1,
+    "import/no-duplicates": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ]
+  },
+  "plugins": [
+    "prettier"
+  ]
+}
