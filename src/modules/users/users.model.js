@@ -72,7 +72,7 @@ UserSchema.methods = {
       name: `${this.firstname} ${this.lastname}`,
       email: this.email,
       phone: this.phone,
-      token: this.createToken()
+      token: `JWT ${this.createToken()}`
     };
   },
   toJSON() {
@@ -80,8 +80,7 @@ UserSchema.methods = {
       id: this._id,
       name: `${this.firstname} ${this.lastname}`,
       email: this.email,
-      phone: this.phone,
-      password: this.password
+      phone: this.phone
     };
   }
 };

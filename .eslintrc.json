@@ -9,6 +9,7 @@
     "linebreak-style": 0,
     "import/no-extraneous-dependencies": 1,
     "import/no-duplicates": 1,
+    "consistent-return": 1,
     "prettier/prettier": [
       "error",
       {

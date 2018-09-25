@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "cross-env NODE_ENV=developement nodemon --exec babel-node ./src"
+    "server": "cross-env NODE_ENV=developement nodemon --exec babel-node ./src",
+    "server_prod": "cross-env NODE_ENV=production nodemon --exec babel-node ./src",
+    "server_debug": "cross-env NODE_ENV=developement nodemon --inspect --exec babel-node ./src"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -19,6 +21,7 @@
     "mongoose-unique-validator": "^2.0.1",
     "nodemon": "^1.18.4",
     "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "validator": "^10.7.1"
   },

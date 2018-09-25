@@ -1,17 +1,20 @@
 const mongoCredentials = {
-  MONGO_USER: 'thebunny',
-  MONGO_PASSWORD: 'Bunny1526'
+  MONGO_USER: '',
+  MONGO_PASSWORD: ''
 };
 
 const devConfig = {
   MONGO_URL: `mongodb://${mongoCredentials.MONGO_USER}:${
     mongoCredentials.MONGO_PASSWORD
   }@ds159812.mlab.com:59812/bridezilla`,
-  JWT_SECRET: 'ZenApp'
+  JWT_SECRET: ''
 };
 
 const prodConfig = {
-  MONGO_URL: ''
+  MONGO_URL: `mongodb://${mongoCredentials.MONGO_USER}:${
+    mongoCredentials.MONGO_PASSWORD
+  }@ds159812.mlab.com:59812/bridezilla`,
+  JWT_SECRET: ''
 };
 
 const defaultConfig = {
