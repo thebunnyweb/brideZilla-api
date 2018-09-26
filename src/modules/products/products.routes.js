@@ -12,5 +12,7 @@ Routes.patch(
   Expressvalidate(productsValidation),
   productController.updateProduct
 );
+Routes.delete('/removeproduct/:id', productController.removeRecord);
+Routes.get('/productsbyvendor/:id', productController.getProductsByVendor);
 
 export default Routes;

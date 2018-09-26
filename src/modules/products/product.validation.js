@@ -2,7 +2,9 @@ import Joi from 'joi';
 
 export default {
   ProductValidation: {
+    product_image: Joi.string().required(),
     garment_name: Joi.string().required(),
+    vendor_id: Joi.string().required(),
     vendor_sku_code: Joi.string().required(),
     description: Joi.string()
       .required()

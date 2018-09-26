@@ -1,21 +1,8 @@
-const mongoCredentials = {
-  MONGO_USER: '',
-  MONGO_PASSWORD: ''
-};
+const mongoCredentials = {};
 
-const devConfig = {
-  MONGO_URL: `mongodb://${mongoCredentials.MONGO_USER}:${
-    mongoCredentials.MONGO_PASSWORD
-  }@ds159812.mlab.com:59812/bridezilla`,
-  JWT_SECRET: ''
-};
+const devConfig = {};
 
-const prodConfig = {
-  MONGO_URL: `mongodb://${mongoCredentials.MONGO_USER}:${
-    mongoCredentials.MONGO_PASSWORD
-  }@ds159812.mlab.com:59812/bridezilla`,
-  JWT_SECRET: ''
-};
+const prodConfig = {};
 
 const defaultConfig = {
   port: process.env.PORT || 3200
