@@ -1,3 +1,4 @@
+import polyfill from 'babel-polyfill'; /*eslint-disable-line*/
 import express from 'express';
 import ApiDoc from 'express-mongoose-docs';
 import mongoose from 'mongoose';
