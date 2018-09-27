@@ -1,8 +1,21 @@
-const mongoCredentials = {};
+const mongoCredentials = {
+  MONGO_USER: 'thebunny',
+  MONGO_PASSWORD: 'Bunny1526'
+};
 
-const devConfig = {};
+const devConfig = {
+  MONGO_URL: `mongodb://${mongoCredentials.MONGO_USER}:${
+    mongoCredentials.MONGO_PASSWORD
+  }@ds159812.mlab.com:59812/bridezilla`,
+  JWT_SECRET: 'ZenApp'
+};
 
-const prodConfig = {};
+const prodConfig = {
+  MONGO_URL: `mongodb://${mongoCredentials.MONGO_USER}:${
+    mongoCredentials.MONGO_PASSWORD
+  }@ds159812.mlab.com:59812/bridezilla`,
+  JWT_SECRET: 'ZenApp'
+};
 
 const defaultConfig = {
   port: process.env.PORT || 3200
