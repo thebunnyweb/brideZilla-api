@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "npm run server",
     "server": "cross-env NODE_ENV=developement nodemon --exec babel-node ./src",
     "server_prod": "cross-env NODE_ENV=production nodemon --exec babel-node ./src",
     "server_debug": "cross-env NODE_ENV=developement nodemon --inspect --exec babel-node ./src"
