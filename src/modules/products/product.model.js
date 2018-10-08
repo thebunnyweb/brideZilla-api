@@ -105,7 +105,8 @@ ProductSchema.methods = {
       neck_type: this.neck_type,
       special_finishing: this.special_finishing,
       care_instruction: this.care_instruction,
-      special_packaging: this.special_packaging
+      special_packaging: this.special_packaging,
+      gallery_images: this.gallery_images
     };
   }
 };
