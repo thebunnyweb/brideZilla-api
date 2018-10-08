@@ -13,7 +13,7 @@ export async function addVendor(req, res) {
 
 export async function getVendors(req, res) {
   try {
-    const vendors = await VendorModel.find({});
+    const vendors = await VendorModel.find({}).populate('category_id', ['_id', 'category_name']);
     res.status(Httpstatus.OK).json(vendors);
   } catch (error) {
     res.status(Httpstatus.BAD_GATEWAY).json(error);
