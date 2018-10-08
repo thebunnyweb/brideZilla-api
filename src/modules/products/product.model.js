@@ -75,6 +75,9 @@ const ProductSchema = new Schema(
     special_packaging: {
       type: String,
       trim: true
+    },
+    gallery_images: {
+      type: Number
     }
   },
   {
