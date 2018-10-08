@@ -35,7 +35,7 @@ const VendorSchema = new Schema(
       type: String,
       trim: true
     },
-    cateory_id: {
+    category_id: {
       type: Schema.Types.ObjectId,
       ref: 'Category'
     },
