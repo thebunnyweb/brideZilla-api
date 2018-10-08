@@ -4,6 +4,10 @@ import uniqueValidator from 'mongoose-unique-validator';
 
 const VendorSchema = new Schema(
   {
+    vendor_profile: {
+      type: String,
+      required: [true, 'Vendor Image is required']
+    },
     vendor_name: {
       type: String,
       required: [true, 'Vendor name is required'],
@@ -30,6 +34,10 @@ const VendorSchema = new Schema(
     vendor_website: {
       type: String,
       trim: true
+    },
+    cateory_id: {
+      type: Schema.Types.ObjectId,
+      ref: 'Category'
     },
     vendor_active_state: {
       type: Boolean,

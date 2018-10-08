@@ -2,6 +2,7 @@ import Joi from 'joi';
 
 export default {
   VendorValidation: {
+    vendor_profile: Joi.string().required(),
     vendor_name: Joi.string()
       .required()
       .min(3),

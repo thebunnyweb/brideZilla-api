@@ -19,6 +19,10 @@ var _mongooseUniqueValidator2 = _interopRequireDefault(_mongooseUniqueValidator)
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VendorSchema = new _mongoose.Schema({
+  vendor_profile: {
+    type: String,
+    required: [true, 'Vendor Image is required']
+  },
   vendor_name: {
     type: String,
     required: [true, 'Vendor name is required'],
@@ -46,6 +50,10 @@ var VendorSchema = new _mongoose.Schema({
   vendor_website: {
     type: String,
     trim: true
+  },
+  cateory_id: {
+    type: _mongoose.Schema.Types.ObjectId,
+    ref: 'Category'
   },
   vendor_active_state: {
     type: Boolean,
