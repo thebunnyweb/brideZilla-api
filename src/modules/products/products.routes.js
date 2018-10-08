@@ -14,5 +14,6 @@ Routes.patch(
 );
 Routes.delete('/removeproduct/:id', productController.removeRecord);
 Routes.get('/productsbyvendor/:id', productController.getProductsByVendor);
+Routes.get('/product/:id', productController.getProductById);
 
 export default Routes;

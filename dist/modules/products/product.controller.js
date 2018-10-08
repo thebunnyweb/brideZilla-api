@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getProductsByVendor = exports.removeRecord = exports.updateProduct = exports.getProduct = exports.addProduct = undefined;
+exports.getProductById = exports.getProductsByVendor = exports.removeRecord = exports.updateProduct = exports.getProduct = exports.addProduct = undefined;
 
 var addProduct = exports.addProduct = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res) {
@@ -188,6 +188,43 @@ var getProductsByVendor = exports.getProductsByVendor = function () {
 
   return function getProductsByVendor(_x9, _x10) {
     return _ref5.apply(this, arguments);
+  };
+}();
+
+var getProductById = exports.getProductById = function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(req, res) {
+    var productdata;
+    return regeneratorRuntime.wrap(function _callee6$(_context6) {
+      while (1) {
+        switch (_context6.prev = _context6.next) {
+          case 0:
+            _context6.prev = 0;
+            _context6.next = 3;
+            return _product2.default.findById(req.params.id);
+
+          case 3:
+            productdata = _context6.sent;
+
+            res.status(_httpStatus2.default.OK).json(productdata);
+            _context6.next = 10;
+            break;
+
+          case 7:
+            _context6.prev = 7;
+            _context6.t0 = _context6['catch'](0);
+
+            res.status(_httpStatus2.default.BAD_GATEWAY).json(_context6.t0);
+
+          case 10:
+          case 'end':
+            return _context6.stop();
+        }
+      }
+    }, _callee6, this, [[0, 7]]);
+  }));
+
+  return function getProductById(_x11, _x12) {
+    return _ref6.apply(this, arguments);
   };
 }();
 

@@ -60,3 +60,12 @@ export async function getProductsByVendor(req, res) {
     res.status(HttpStatus.BAD_GATEWAY).json(error);
   }
 }
+
+export async function getProductById(req, res) {
+  try {
+    const productdata = await ProductsModel.findById(req.params.id);
+    res.status(HttpStatus.OK).json(productdata);
+  } catch (error) {
+    res.status(HttpStatus.BAD_GATEWAY).json(error);
+  }
+}

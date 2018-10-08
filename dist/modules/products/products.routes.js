@@ -29,5 +29,6 @@ Routes.get('/products', productController.getProduct);
 Routes.patch('/updateproduct/:id', (0, _expressValidation2.default)(_product2.default), productController.updateProduct);
 Routes.delete('/removeproduct/:id', productController.removeRecord);
 Routes.get('/productsbyvendor/:id', productController.getProductsByVendor);
+Routes.get('/product/:id', productController.getProductById);
 
 exports.default = Routes;
