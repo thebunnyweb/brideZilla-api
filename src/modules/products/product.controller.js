@@ -63,7 +63,10 @@ export async function getProductsByVendor(req, res) {
 
 export async function getProductById(req, res) {
   try {
-    const productdata = await ProductsModel.findById(req.params.id);
+    const productdata = await ProductsModel.findById(req.params.id).populate('vendor_id', [
+      '_id',
+      'vendor_name'
+    ]);
     res.status(HttpStatus.OK).json(productdata);
   } catch (error) {
     res.status(HttpStatus.BAD_GATEWAY).json(error);
