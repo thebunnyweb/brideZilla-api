@@ -27,7 +27,6 @@ const ProductSchema = new Schema(
       type: String,
       required: [true, 'Description is required'],
       trim: true,
-      minlength: 100
     },
     style: {
       type: String,

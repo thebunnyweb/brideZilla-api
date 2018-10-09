@@ -6,9 +6,7 @@ export default {
     garment_name: Joi.string().required(),
     vendor_id: Joi.string().required(),
     vendor_sku_code: Joi.string().required(),
-    description: Joi.string()
-      .required()
-      .min(100),
+    description: Joi.string().required(),
     style: Joi.string(),
     retail_price: Joi.string().required(),
     delivery_time: Joi.string(),
