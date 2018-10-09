@@ -14,6 +14,10 @@ const VendorSchema = new Schema(
       minlength: [3, 'Atleat 3 characters required'],
       trim: true
     },
+    vendor_short: {
+      type: String,
+      trim: true
+    },
     vendor_speciality: {
       type: String,
       required: [true, 'Vendor name is required'],
