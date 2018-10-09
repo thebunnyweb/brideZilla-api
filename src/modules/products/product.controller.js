@@ -65,7 +65,8 @@ export async function getProductById(req, res) {
   try {
     const productdata = await ProductsModel.findById(req.params.id).populate('vendor_id', [
       '_id',
-      'vendor_name'
+      'vendor_name',
+      'vendor_short'
     ]);
     res.status(HttpStatus.OK).json(productdata);
   } catch (error) {
