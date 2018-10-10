@@ -73,3 +73,27 @@ export async function getProductById(req, res) {
     res.status(HttpStatus.BAD_GATEWAY).json(error);
   }
 }
+
+
+
+export async function getTopSellers(req, res) {
+  try {
+      const topsellerData = await ProductsModel.find({
+        'vendor_sku_code': {
+            $in: [
+                'KJS-4-NS # 8',
+                'KJS - 1 - WS # 4 (wine)',
+                'KJS-4-DS # 13',
+                'AMA027',
+                'AMA039',
+                'AMA044',
+                '18AW 663',
+                '18AW 656'
+            ]
+        }
+      });
+      res.status(HttpStatus.OK).json(topsellerData);
+  } catch (error) {
+    res.status(HttpStatus.BAD_GATEWAY).json(error);
+  }
+}
